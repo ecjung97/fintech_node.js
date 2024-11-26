@@ -1,0 +1,96 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+새로운 기능 및 개선 사항에 대 한 최신 PowerShell을 설치 하세요! https://aka.ms/PSWindows
+
+PS D:\fintech\nodejs> cd myContacts
+PS D:\fintech\nodejs\myContacts> npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (mycontacts) npm warn init canceled
+
+PS D:\fintech\nodejs\myContacts> npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (mycontacts) contacts-manager
+version: (1.0.0)
+description: contacts manager
+entry point: (index.js) app.js
+test command:
+git repository: https://github.com/ecjung97/node.js_practice.git
+keywords: node.js, fintech
+author: ecjung97
+license: (ISC)
+About to write to D:\fintech\nodejs\myContacts\package.json:
+
+{
+  "name": "contacts-manager",
+  "version": "1.0.0",
+  "description": "contacts manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecjung97/node.js_practice.git"
+  },
+  "keywords": [
+    "node.js",
+    "fintech"
+  ],
+  "author": "ecjung97",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecjung97/node.js_practice/issues"
+  },
+  "homepage": "https://github.com/ecjung97/node.js_practice#readme"
+}
+
+
+Is this OK? (yes)
+
+PS D:\fintech\nodejs\myContacts>
+
+======================================================================
+
+PS D:\fintech\nodejs\myContacts> npm install express
+
+added 65 packages, and audited 66 packages in 3s
+
+13 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS D:\fintech\nodejs\myContacts>
+
+======================================================================
+// nodemon으로 실행하면 cntl+C 없이 서버 자동 재시작함.
+
+PS D:\fintech\nodejs\myContacts> npm install nodemon -g --save-dev
+
+added 29 packages in 2s
+
+4 packages are looking for funding
+  run `npm fund` for details
+PS D:\fintech\nodejs\myContacts>
+
+======================================================================
+
+

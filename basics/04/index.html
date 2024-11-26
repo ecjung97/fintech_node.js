@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--  메타 태그는 IE 브라우저에서 HTML 문서가 최신 표준을 준수하며 렌더링되도록 
+    보장하는 역할을 한다.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 모바일 기기에서 웹 페이지가 올바르게 렌더링되도록 도와주는 메타 태그 -->
+  <title>Do it! Node.js</title>
+  <style>
+    * {
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      /* border-box로 설정하면 요소의 너비와 높이가 테두리(border)와 안쪽 여백(padding)을
+       포함한 전체 요소의 크기로 계산 */
+    }
+    body {
+      background-color: #def;
+      display: flex;/*
+       CSS의 속성 중 하나로, Flexbox 레이아웃 모델을 적용
+       하는 데 사용. Flexbox는 요소들을 수평 또는 수직으로 정렬하고 공간 배분을 유연하게 관리할 수 있도록 도와주는 강력한 도구이다.
+       부모 요소(container)에 display: flex;를 적용하면 그 하위 요소들(child items)이 Flexbox의 아이템으로 동작하게 된다. 이를 
+       통해 요소들을 효율적으로 배치하고 정렬할 수 있다.
+      */
+      justify-content: center;/* 수평 정렬*/
+      align-items: center; /* 수직 정렬*/
+      height: 100vh;
+      /*vh는 CSS에서 사용되는 길이 단위로, Viewport(뷰포트)의 높이에 상대적으로 크기를 정의한다.
+여기서 vh는 "Viewport Height"의 약자로, 현재 보이는 브라우저 창의 전체 높이를 100 등분한 값이다. 즉, 1vh는 뷰포트의 높이의 1%를 나타낸다.
+예를 들어, height: 100vh;는 요소의 높이를 현재 브라우저 창의 전체 높이와 동일하게 만듭니다. 따라서 화면 전체를 가득 채우는 섹션을 만들거나,
+ 뷰포트의 일정 부분에 컨텐츠를 고정하는 데 사용될 수 있다.
+
+이와 유사하게, vw는 "Viewport Width"를 나타내며, 뷰포트의 너비에 대한 상대적인 값이다. 예를 들어, width: 50vw;는 요소의 
+너비를 뷰포트의 너비의 절반으로 설정한다.
+
+이러한 Viewport 단위는 반응형 웹 디자인에서 특히 유용하며, 다양한 장치와 화면 크기에서 일관된 UI/UX를 제공하는 데 도움을 준다.
+      */
+    }
+    .wrapper {
+      text-align: center;
+      display: flex;
+      flex-direction: column;/* Flex 컨테이너의 주 축(main axis) 방향을 수직(column) 방향으로 설정하는 것을 의미*/
+      gap: 2em;  /* Flex 컨테이너 내 Flex 아이템 사이의 간격을 2em으로 설정 */
+    }
+    .wrapper h1 {
+      font-size: 3em;
+      text-transform: uppercase;
+    }
+    .wrapper p {
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Welcome to Node.js</h1>
+    <p>Node.js 세계에 오신 것을 환영합니다.</p>
+  </div>
+</body>
+</html>

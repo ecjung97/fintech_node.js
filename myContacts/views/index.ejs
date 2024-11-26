@@ -1,0 +1,44 @@
+<%- include("./include/_header.ejs") %> <!-- 상단 공통 페이지를 외부 포함 파일로 처리 => _header.ejs 파일을 포함한다. -->
+
+  <!-- Main -->
+  <main id="site-main">
+    <div class="button-box">
+      <a href="/contacts/add" class="btn btn-light"><i class="fa-solid fa-user-plus"></i>연락처 추가</a>
+    </div>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>메일 주소</th>
+          <th>전화번호</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 복수개의 연락처 정보 출력 -->
+        <% contacts.forEach(contact => { %>
+            <tr>
+                <td><%= contact.name %></td>
+                <td><%= contact.email %></td>
+                <td><%= contact.phone %></td>
+                <td>
+                    <a href="/contacts/<%= contact._id %>" class="btn update" title="수정">
+                    <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    
+                    <form method="post" action="/contacts/<%=contact._id%>?_method=DELETE" style="display: inline;">
+                      <input type="submit" class="btn_delete" title="삭제" value="X" >
+                      <!-- title 속성: 마우스를 요소 위에 hover 시 툴팁(tool-tip) 형태로 사용자에게 정보 제공.
+                           _method=DELETE: POST 방식으로 전송되는 중간에 DELETE 방식으로 변경. -->
+                    </form>
+
+                </td>
+            </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </main>
+  <!-- /Main -->
+  
+<%- include("./include/_footer.ejs") %> <!-- 하당 공통 페이지를 현재 위치에 포함한다. -->
